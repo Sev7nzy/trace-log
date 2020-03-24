@@ -1,0 +1,16 @@
+#  Sleuth + ZipKin
+spring:
+  profiles:
+    include: datasource
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+  application:
+    name: app-A
+server:
+  port: 8085
